@@ -19,6 +19,32 @@ a {
   justify-content: center;
 }
 
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+p {
+  color: black;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+}
+.section-title {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+.section-title span {
+  color: palevioletred;
+}
+
 #hero {
   background-image: url("./images/helloWorld.avif");
   background-size: cover;
@@ -99,36 +125,103 @@ a {
 }
 
 /* Introduction section*/
-#introduction {
-}
 #introduction .introduction {
   flex-direction: column;
   text-align: center;
-  max-width: 150px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 100px 0;
 }
-#introduction .section-title {
-  font-size: 4rem;
-  font-weight: 300;
-  color: black;
+
+#introduction .introduction-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+#introduction .introduction-item {
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url("./images/keyboard.avif");
+  background-size: cover;
+  margin: 10px 5%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+#introduction .introduction-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #374350 0%, #5b6b7c 100%);
+  opacity: 0.8;
+  z-index: -1;
+}
+#introduction .introduction-bottom .icon {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+#introduction .introduction-item h2 {
+  font-size: 2rem;
+  color: pink;
   margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  text-align: center;
 }
-#introduction .section-title span {
-  color: palevioletred;
+#introduction .introduction-item p {
+  color: pink;
+  margin-bottom: 5px;
+  text-align: left;
 }
-#introduction .introduction-top {
-  font-size: 1.4rem;
-  margin-top: 5px;
-  line-height: 2.5rem;
-  font-weight: 300px;
-  letter-spacing: 0.05rem;
-}
-
 /* End of Introduction section*/
+
+/* Theory section*/
+#theory .theory {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#theory .theory-header h1 {
+  margin-bottom: 50px;
+}
+#theory .all-theory {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#theory .theory-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#theory .theory-info {
+  padding: 30px;
+  flex-basis: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(60deg, #374350 0%, #5b6b7c 100%);
+  color: pink;
+}
+/* End of theory section*/
 
 @keyframes text_reveal_box {
   50% {
