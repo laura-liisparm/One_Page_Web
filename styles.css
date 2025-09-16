@@ -4,6 +4,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: rgb(253, 214, 221);
+}
 html {
   font-size: 10px;
   font-family: "Monserrat", sans-serif;
@@ -27,7 +30,7 @@ img {
 }
 p {
   color: black;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin-top: 5px;
   line-height: 2.5rem;
   font-weight: 300;
@@ -133,6 +136,10 @@ p {
   margin: 0 auto;
   padding: 100px 0;
 }
+#introduction .introduction-top {
+  max-width: 500px;
+  margin: 0 auto;
+}
 
 #introduction .introduction-bottom {
   display: flex;
@@ -188,46 +195,140 @@ p {
 /* Theory section*/
 #theory .theory {
   flex-direction: column;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 100px 0;
 }
-#theory .theory-header h1 {
-  margin-bottom: 50px;
+#theory .theory-top {
+  max-width: 500px;
+  margin: 0 auto;
 }
-#theory .all-theory {
+#theory .theory-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
+
 #theory .theory-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 80%;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 10px;
-}
-#theory .theory-info {
-  padding: 30px;
-  flex-basis: 50%;
-  height: 100%;
+  flex-basis: 80%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  background-image: linear-gradient(60deg, #374350 0%, #5b6b7c 100%);
-  color: pink;
+  padding: 30px;
+  border-radius: 10px;
+  background-image: url("./images/code.avif");
+  background-size: cover;
+  margin: 10px 5%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
-#theory .theory-img {
-  width: 100%;
+
+#theory .theory-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
   height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #374350 0%, #5b6b7c 100%);
+  opacity: 0.8;
+  z-index: -1;
+}
+#theory .theory-bottom .icon {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+#theory .theory-item h2 {
+  font-size: 2rem;
+  color: pink;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#theory .theory-item p {
+  color: pink;
+  margin-bottom: 20px;
+}
+#theory .theory-vid {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
+.theory-vid iframe {
+  display: block;
+  margin: 0 auto;
+}
 /* End of theory section*/
+
+/* Summary section*/
+#summary .summary {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#summary .summary-top {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#summary .summary-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+#summary .summary-item {
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 120px;
+  border-radius: 10px;
+  background-image: url("./images/vibe.png");
+  background-size: cover;
+  margin: 10px 5%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+#summary .summary-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #374350 0%, #5b6b7c 100%);
+  opacity: 0.8;
+  z-index: -1;
+}
+#summary .summary-bottom .icon {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+#summary .summary-item h2 {
+  font-size: 2rem;
+  color: pink;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#summary .summary-item p {
+  color: pink;
+  margin-bottom: 5px;
+  text-align: left;
+}
+/* End of summary section*/
 
 @keyframes text_reveal_box {
   50% {
