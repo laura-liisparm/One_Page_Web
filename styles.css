@@ -49,6 +49,8 @@ p {
   color: palevioletred;
 }
 
+/* Header section*/
+
 header {
   color: pink;
   padding: 30px;
@@ -77,6 +79,26 @@ nav a:hover {
   box-shadow: 0px 0px 5px 0 pink;
 }
 
+.skip {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease;
+}
+
+.skip:focus {
+  transform: translateY(0);
+}
+
+/* End of header section*/
+
+/* Hero section*/
 #hero {
   background-image: url("./images/helloWorld.avif");
   background-size: cover;
@@ -110,6 +132,7 @@ nav a:hover {
   animation: text_reveal 0.5s ease forwards;
   animation-delay: 1s;
 }
+
 #hero h1:nth-child(1) {
   animation-delay: 1s;
 }
@@ -155,12 +178,13 @@ nav a:hover {
   color: white;
   background-color: pink;
 }
+/* End of hero section*/
 
 /* Introduction section*/
 #introduction .introduction {
   flex-direction: column;
   text-align: center;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
 }
@@ -223,7 +247,7 @@ nav a:hover {
 /* Theory section*/
 #theory .theory {
   flex-direction: column;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
 }
@@ -298,7 +322,7 @@ nav a:hover {
 #summary .summary {
   flex-direction: column;
   text-align: center;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 100px 0;
 }
@@ -361,7 +385,7 @@ nav a:hover {
 /* Contact section*/
 #contact .contact {
   flex-direction: column;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 90%;
 }
@@ -448,5 +472,86 @@ footer p {
 @keyframes text_reveal {
   100% {
     color: white;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  html {
+    font-size: 8px; /* scale down base font */
+  }
+
+  header {
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 1.6rem;
+    margin: 5px 0;
+  }
+
+  #hero .hero {
+    padding: 0 20px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero .cta {
+    font-size: 1.6rem;
+    padding: 8px 20px;
+  }
+
+  /* Introduction / Theory / Summary sections */
+  #introduction .introduction-bottom,
+  #theory .theory-bottom,
+  #summary .summary-bottom {
+    flex-direction: column;
+  }
+
+  #introduction .introduction-item,
+  #theory .theory-item,
+  #summary .summary-item {
+    flex-basis: 100%;
+    margin: 15px 0;
+    padding: 20px;
+  }
+
+  #theory .theory-vid {
+    width: 100%;
+    height: auto;
+  }
+
+  #theory .theory-vid iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* keeps it responsive */
+  }
+
+  /* Contact section */
+  #contact .contact-items {
+    width: 100%;
+  }
+
+  #contact .contact-item {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .username {
+    font-size: 2rem;
   }
 }
