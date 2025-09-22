@@ -238,7 +238,7 @@ nav a:hover {
   text-transform: uppercase;
 }
 #introduction .introduction-item p {
-  color: pink;
+  color: white;
   margin-bottom: 5px;
   text-align: left;
 }
@@ -304,7 +304,7 @@ nav a:hover {
   text-transform: uppercase;
 }
 #theory .theory-item p {
-  color: pink;
+  color: white;
   margin-bottom: 20px;
 }
 #theory .theory-vid {
@@ -376,7 +376,7 @@ nav a:hover {
   text-transform: uppercase;
 }
 #summary .summary-item p {
-  color: pink;
+  color: white;
   margin-bottom: 5px;
   text-align: left;
 }
@@ -424,8 +424,84 @@ nav a:hover {
   line-height: 2rem;
   font-weight: 500;
 }
-
 /* End of contact section*/
+
+/* References section*/
+#references .references {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#references .references-top {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#references .references-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+#references .references-item {
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 120px;
+  border-radius: 10px;
+  background-image: url("./images/books.jpg");
+  background-size: cover;
+  margin: 10px 5%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+#references .references-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(60deg, #503741 0%, #7c5b6e 100%);
+  opacity: 0.8;
+  z-index: -1;
+}
+#references .references-bottom .icon {
+  height: 80px;
+  width: 80px;
+  margin-bottom: 20px;
+}
+#references .references-item h2 {
+  font-size: 2rem;
+  color: pink;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#references .references-item a {
+  color: white;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 1.8rem;
+  margin-top: 5px;
+  line-height: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 0.2s;
+}
+#references .references-item a:hover {
+  background-color: pink;
+}
+/* End of references section*/
 
 /* business-card section*/
 .cat-picture {
@@ -478,7 +554,7 @@ footer p {
 /* Mobile view */
 @media (max-width: 768px) {
   html {
-    font-size: 8px; /* scale down base font */
+    font-size: 8px;
   }
 
   header {
@@ -534,7 +610,7 @@ footer p {
   #theory .theory-vid iframe {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9; /* keeps it responsive */
+    aspect-ratio: 16 / 9;
   }
 
   /* Contact section */
